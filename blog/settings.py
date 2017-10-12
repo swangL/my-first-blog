@@ -25,7 +25,7 @@ SECRET_KEY = 'pty@+2hf0+(0fqk4rk8pm7e&yw1qmx7i&5*n4x@0yfmr1k9%r-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['swang.pythonanywhere.com']
+ALLOWED_HOSTS = ['swang.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
