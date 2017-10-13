@@ -1,14 +1,23 @@
 <!-- blogView/templates/index.html -->
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
+<!-- The first two links gets the bottstrap css package-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- This link makes it possible to get a font to css -->
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<!-- This link refears to our own css file, where the beauty happens-->
+<link rel="stylesheet" href="{% static 'css/blogView.css' %}">
     <head>
         <meta charset="utf-8">
-        <title>How to save the world, and yourself HTSTWAY</title>
+        <title>This is the begining on something beautifull!</title>
     </head>
     <body>
+      <div class = "page-header">
         <h1>Howdy! I am Learning Django! Hej Katrine!!</h1>
-      <a href="/about/"> About Me </a>
-      <br /> 
+      </div>
+      <a href="/about/"> About Me </a><br />
       <a href="/post/"> Click to see the latest post </a>
     </body>
 </html>

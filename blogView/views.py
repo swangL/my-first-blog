@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView
 from .models import Post
 from django.utils import timezone
@@ -15,3 +15,7 @@ class AboutPageView(TemplateView):
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request,'blogView/post_list.html',{'posts':posts})
+
+def post_detail(request,pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'blogView/post_detail.html', {'post': post})
